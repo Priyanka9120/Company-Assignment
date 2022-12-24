@@ -1,12 +1,15 @@
 const express =require("express")
 const mongoose =require("mongoose")
-const route =require("../routes/routes.js")
+const route =require("./routes/routes.js")
 
 const app =express()
-app.use(express())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
+mongoose.set('strictQuery', true)
 mongoose.connect("mongodb+srv://priyanka912066:Pie5MEDyx8B1zOiq@cluster0.ucnslwp.mongodb.net/companyAssignmentDatabase",
- {NewUrlParser:True})
+ {useNewUrlParser: true})
+ 
 
  .then(() => console.log(("MongoDb is connected")))
     .catch(err => console.log(err.message))

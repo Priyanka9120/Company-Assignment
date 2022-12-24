@@ -14,7 +14,8 @@ Card API
 
 Customer collection field:
 
-Field             Type            Description
+Field  
+           Type            Description
 firstName        string
 lastName         string
 mobileNumber     string          10 digits long
